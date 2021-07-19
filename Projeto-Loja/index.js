@@ -102,18 +102,18 @@ app.put("/todos/:id", (req,res)=>{
     const novoCalcado = req.body;
     if(!Object.keys(novoCalcado).length){
         res.status(400).send({
-            message:"O body da requisição não pode estar vazio."
+            message:"O body uda reqisição não pode estar vazio."
         });
 
         return;
     }
-    // if(!novoCalcado || !novoCalcado.nome || !novoCalcado.imagemUrl){
-    //     res.status(400).send({
-    //         message:'Calçado inválido. Certifique-se de que o body da requisição possui "nome" e "imagemUrl".'
+    if(!novoCalcado || !novoCalcado.nome || !novoCalcado.imagemUrl){
+        res.status(400).send({
+            message:'Calçado inválido. Certifique-se de que o body da requisição possui "nome" e "imagemUrl".'
             
-    //     });
-    //     return;
-    // }
+        });
+        return;
+    }
 
     const calcado = getCalcadobyId(id);
 
@@ -141,7 +141,7 @@ app.delete("/todos/:id", (req,res)=>{
         return;
     }
 
-    delete loja[calcadoIndex];
+    loja.splice(calcadoIndex,1)
 
     res.send(`Calçado com id ${id} removido com sucesso!`)
 });
