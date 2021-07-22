@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Gove',sans-serif;
 }
 
 @font-face {
@@ -8,8 +9,13 @@
   src: url('./font/go3v2.ttf');
 }
 
+/* Header */
+.header #titulo{
+  text-decoration: none;
+  color: black; 
+}
 .header h1{
-  font-family: 'Gove',sans-serif;
+
   text-align: center;
   margin: 1rem 0;
 }
@@ -29,7 +35,7 @@
   text-decoration: none;
   color: #989898;
   font-size: 1.4rem;
-  font-family: "Gove",sans-serif ;
+  
   text-transform: uppercase;
   
 }
@@ -46,15 +52,63 @@
   border-radius: 0.5rem;
   text-align: center;
   display: flex;
-  
 }
 .header .search input{
+  font-size: 0.7rem;
   width: 8rem;
   border: none;
   outline: none;
   padding: 0 0 0 0.4rem;
 }
 
+/* Main */
+.main {
+  width: 100%;
+
+
+}
+
+.main .bloco-form{
+  width: 30%;
+  text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+.main .bloco-form h2{
+  margin-bottom: 1rem;
+}
+.main .bloco-form input{
+  margin-bottom: 1rem;
+  font-weight: normal;
+  width: 80%;
+  padding: 0.5rem 0.5rem 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.main .bloco-form button{
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 0.3rem;
+}
+
+.main .bloco-form button:hover{
+  background-color: blue;
+  color: white;
+}
+.btn{
+  text-decoration: none;
+  color: black;
+}
+.btn:hover{
+  color: white;
+}
 .main ul{
   width: 50%;
   margin: 0 auto;
@@ -69,31 +123,66 @@
 
 .main .imagem{
   margin-bottom: 1rem;
-  height: 10rem;
+  height: 13rem;
   border-radius: 0.5rem;
   padding: 1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   background-color: #e0e0e0;
   cursor: pointer;
   transition: all 1s ease-in-out;
 }
+.main img{
+  width: 10rem;
+}
+.main .imagem button{
+  display: none;
+}
 
 .main .imagem:hover{
-  background-color: aqua;
+  background-color: gray;
 }
+.main .imagem:hover button{
+  display: block;
+}
+
+.main .imagem .botoes{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  
+}
+.main .imagem .botoes .botaoIcon{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.main .imagem .botoes .botaoIcon:hover #edit{
+  color: blue;
+}
+.main .imagem .botoes .botaoIcon:hover #delete{
+  color: red;
+}
+.main .imagem .botoes .icon{
+  width: 1.2rem;
+}
+
 
 .main .info{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
-.main .icon{
-  padding: 0 0.5rem 0 0;
+.main .info h3{
+  font-weight: normal;
 }
 
-.main img{
-  width: 10rem;
-}
+
+
+
 
