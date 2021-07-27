@@ -5,9 +5,6 @@ import NikeAntiClog from '../../img/Nike-Anti-Clog.png'
 import NikeFlyease from '../../img/Nike-Flyease.png'
 import NikeFlyknit from '../../img/Nike-Flyknit.png'
 import NikeKD14 from '../../img/tenis-nike-kd14.png'
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
 import BorderColorIcon from '@material-ui/icons/BorderColor';
@@ -53,68 +50,20 @@ export default class App extends React.Component{
           }  
         
         ],
-        nomeCalcado: "",
-        imagemUrlCalcado: "",
-        editando: false,
-        indexEditando: null
       };
     }
   
-    onSubmit = (event) =>{
-      event.preventDefault();
-      const {calcados, nomeCalcado,imagemUrlCalcado,editando,indexEditando} = this.state;
-  
-      if(editando){
-        const calcadosAtualizados =  calcados.map((calcado,index)=>{
-          if(indexEditando === index){
-            calcado.nome = nomeCalcado;
-            calcado.imagemUrl = imagemUrlCalcado;
-          }
-  
-          return calcado;
-        });
-  
-        this.setState({
-          calcados: calcadosAtualizados,
-          indexEditando: null,
-          editando:false
-        });
-  
-      }else{
-        this.setState({
-          calcados:[
-            ...calcados,
-            {
-              nome: nomeCalcado,
-              imagemUrl:imagemUrlCalcado,
-            },
-          ],
-        });
-      }
-      
-      this.setState({
-        nomeCalcado:'',
-        imagemUrlCalcado:''
-      });
-    };
-    
-    deletar = (index) =>{
-      const { calcados } = this.state;
-      this.setState({
-        calcados: calcados.filter((calcado,i) => i !== index )
-      });
-    };
-  
+
     render(){
-      const {calcados,nomeCalcado,imagemUrlCalcado,editando,indexEditando} = this.state;
+      const {calcados} = this.state;
   
       return(
         
         <div className="container">
           
-
-          <main className="main">
+          
             <Header />
+          <main className="main">
             <ul>
               {calcados.map((calcado,index)=>(
                 <li key = {index}>
