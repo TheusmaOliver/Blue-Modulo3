@@ -8,7 +8,6 @@ app.use(express.json());
 
 //import do Mongoose
 const mongoose = require("mongoose");
-const calcado = require("./models/calcado");
 
 //import do Model
 const Calcado = require('./models/calcado')
@@ -32,17 +31,17 @@ app.get("/calcados", async (req, res) => {
 
 // [GET] /calcados/{id} - Retorna apenas um único filme pelo ID 
 app.get("/calcados/:id", async (req, res) => {
-try {
-    const calcado = await Calcado.findById(req.params.id);
-    if (calcado == null) {
-    return res
-        .status(404)
-        .send({ message: "Não é possível encontrar o calçado." });
+    try {
+        const calcado = await Calcado.findById(req.params.id);
+        if (calcado == null) {
+        return res
+            .status(404)
+            .send({ message: "Não é possível encontrar o calçado." });
+        }
+        res.send(calcado);
+    } catch (err) {
+        return res.status(500).send({ message: err.message });
     }
-    res.send(calcado);
-} catch (err) {
-    return res.status(500).send({ message: err.message });
-}
 });
 
 // [POST] - /calcados - Cria um novo calçado (OK)
@@ -73,7 +72,7 @@ app.post("/calcados", async (req, res) => {
 
 app.put("/calcados/:id", async (req, res) => {
     try {
-        const calcado = await Calcado.findOneAndUpdate(req.params.id);
+        const calcado = await Calcado.findByIdAndUpdate(req.params.id);
 
         if (calcado == null) {
             return res.status(404).send({ message: "Calçado não encontrado" });
@@ -88,8 +87,9 @@ app.put("/calcados/:id", async (req, res) => {
         res.send(updatedCalcado);
     } catch (err) {
         return res.status(500).send({ message: err.message });
+        
     }
-});
+}); 
 
 // [Delete] - /filmes{id} - Remover um filme pelo ID
 app.delete("/calcados/:id", async (req, res) => {

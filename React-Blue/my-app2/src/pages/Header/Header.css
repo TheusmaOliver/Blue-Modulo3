@@ -1,0 +1,55 @@
+
+.header #titulo {
+  text-decoration: none;
+  color: black;
+}
+.header h1 {
+  text-align: center;
+  margin: 1rem 0;
+}
+.header ul {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.header li {
+  list-style: none;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header li a {
+  text-decoration: none;
+  color: #989898;
+  font-size: 1.4rem;
+
+  text-transform: uppercase;
+}
+
+.header li a:hover {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.header .search {
+  width: 10rem;
+  height: 0.8rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+}
+.header .search input {
+  font-size: 0.7rem;
+  width: 8rem;
+  border: none;
+  outline: none;
+  padding: 0 0 0 0.4rem;
+}
+
+#cadastro{
+  display: none;
+}

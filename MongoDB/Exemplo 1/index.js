@@ -32,13 +32,13 @@ calcado
         console.log(err);
     })
 
-Calcado.find({})
-    .then((calcados) => {
-        console.log(calcados)
-    })
-    .catch((err) =>{
-        console.log(err)
-    })
+// Calcado.find({})
+//     .then((calcados) => {
+//         console.log(calcados)
+//     })
+//     .catch((err) =>{
+//         console.log(err)
+//     })
 
 // Calcado.find({ _id: "60ff182e838e3250bec6307b" })
 // .then((calcados) => {
