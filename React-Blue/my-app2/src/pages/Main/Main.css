@@ -1,6 +1,21 @@
 .main {
   width: 100%;
 }
+.search {
+  width: 10rem;
+  height: 0.8rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+}
+.search input {
+  font-size: 0.7rem;
+  width: 8rem;
+  border: none;
+  outline: none;
+  padding: 0 0 0 0.4rem;
+}
 
 .main ul {
   width: 50%;

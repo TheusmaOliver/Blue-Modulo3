@@ -1,13 +1,13 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import NikeZoom from './img/tenis-nike-zoom-freak-3.png'
-import NikeAirMax from './img/tenis-nike-air-max-sphere.png'
-import NikeMax from './img/tenis-nike-max-90-se.png'
-import NikeSpace from './img/tenis-space-hippie.png'
-import NikeRunner from './img/tenis-nike-flex-runner.png'
-import NikeMetcon from './img/tenis-nike-metcon-7.png'
-import NikeCourt from './img/tenis-nikecourt-react-vapor-nxt.png'
-import NikePico from './img/tenis-nike-pico-5.png'
+import NikeZoom from './assets/img/tenis-nike-zoom-freak-3.png';
+import NikeAirMax from './assets/img/tenis-nike-air-max-sphere.png';
+import NikeMax from './assets/img/tenis-nike-max-90-se.png';
+import NikeSpace from './assets/img/tenis-space-hippie.png';
+import NikeRunner from './assets/img/tenis-nike-flex-runner.png';
+import NikeMetcon from './assets/img/tenis-nike-metcon-7.png';
+import NikeCourt from './assets/img/tenis-nikecourt-react-vapor-nxt.png';
+import NikePico from './assets/img/tenis-nike-pico-5.png';
 //Importar as páginas
 import Cadastro from './pages/Cadastro';
 import Main from './pages/Main';

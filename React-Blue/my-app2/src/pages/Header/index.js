@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 import './Header.css'
 
 
@@ -17,12 +16,7 @@ function Header(){
                     <li><Link to="/feminino" className="btn">Feminino</Link></li>
                     <li><Link to="/masculino" className="btn"> Masculino</Link></li>
                     <li><Link to="/infantil" className="btn"> Infantil</Link></li>
-                    <li className='search'>
-                        <FontAwesomeIcon icon={faSearch} />
-                        <input type='text' placeholder="O que você procura?"></input>
-                        
-                        
-                    </li>
+                    
                     </ul>
                     
                     <hr/>
