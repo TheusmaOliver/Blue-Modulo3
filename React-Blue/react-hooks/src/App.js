@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; 
+import React, { useCallback, useEffect, useMemo, useState } from 'react'; 
 import './App.css';
 
 function App() {
@@ -18,11 +18,13 @@ function App() {
     localStorage.setItem("alunos",JSON.stringify(alunos))
   },[alunos])
 
-  const handleAdd = () =>{
+  const handleAdd = useCallback(() =>{
     setAlunos([...alunos,input]);
     setInput("");
 
-  }
+  }, [input,alunos])
+
+  const totalAlunos = useMemo(() => alunos.length, [alunos]);
 
   
   return (
@@ -36,7 +38,9 @@ function App() {
           </>
         ))}
       </ul>
-
+      <br/>
+      <strong>Você tem {totalAlunos} cadastrados.</strong>
+      <br/>
       <input type="text" value={input} onChange={(e)=>setInput(e.target.value)}/>
       <button type="button" onClick={handleAdd} > Adicionar </button>
     </div>
