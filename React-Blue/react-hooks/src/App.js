@@ -26,7 +26,9 @@ function App() {
 
   const totalAlunos = useMemo(() => alunos.length, [alunos]);
 
-  
+  const arr = [0]
+  arr.push(1)
+  console.log(arr)
   return (
     <div className="App">
       <ul>

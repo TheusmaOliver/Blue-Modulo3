@@ -7,4 +7,4 @@
 
 * useMemo: a finalidade de se utilizar o useMemo é para otimizar a atualização de um estado dentro do componente sem precisar renderiza-lo novamente.
 
-* useCallback: usado quando queremos usar atualizar um componente filho sem ter renderizações desnecessárias, ou seja, quando queremos mudar um estado de um componente e queremos que aquele estado seja mudado apenas quando chamamos ele, é usado o useCallback, pois sem ele tudo que nos atualizamos no componente aquela função é renderizada desnecessária.
+* useCallback: usado quando queremos atualizar um componente filho sem ter renderizações desnecessárias, ou seja, quando queremos mudar um estado de um componente e queremos que aquele estado seja mudado apenas quando chamamos ele, é usado o useCallback, pois sem ele tudo que nos atualizamos no componente aquela função é renderizada desnecessária.
