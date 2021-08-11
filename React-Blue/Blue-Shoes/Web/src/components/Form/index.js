@@ -11,7 +11,7 @@ const initialValue = {
 }
 
 const ShoesForm = ({ id }) => {
-  const [values, setValues] = useState(id ? '' : initialValue);
+  const [values, setValues] = useState(id ? null : initialValue);
   const history = useHistory();
   
   useEffect( () => {
