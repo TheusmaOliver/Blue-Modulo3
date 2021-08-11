@@ -7,10 +7,12 @@ import Header from '../Header';
 import './Feminino.css'
 
 function Feminino({ calcados }){
+    
     return(
         
         <div>
             <Header/>
+            
             <ul>
                 {calcados.filter((calcado)=>calcado.modelo === 'Feminino' || calcado.modelo === 'Unissex') 
                     .map((calcado,index)=>(

@@ -34,7 +34,7 @@ class ShoesController {
 
     // Validação
 
-    if (!shoes || !shoes.nome || !shoes.imagemUrl) {
+    if (!shoes || !shoes.name || !shoes.imageUrl) {
       res.status(400).send({
         message:
           'Calçado inválido. Certifique-se de que o body da requisição possui "nome" e "imagemUrl".',
@@ -73,7 +73,7 @@ class ShoesController {
       return;
     }
 
-    if (!newShoes || !newShoes.nome || !newShoes.imagemUrl) {
+    if (!newShoes || !newShoes.name || !newShoes.imageUrl) {
       res.status(400).send({
         message:
           'Calçado inválido. Certifique-se de que o body da requisição possui "nome" e "imagemUrl".',

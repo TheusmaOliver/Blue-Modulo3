@@ -9,7 +9,7 @@ import NikeMetcon from './assets/img/tenis-nike-metcon-7.png';
 import NikeCourt from './assets/img/tenis-nikecourt-react-vapor-nxt.png';
 import NikePico from './assets/img/tenis-nike-pico-5.png';
 //Importar as páginas
-import Cadastro from './pages/Cadastro';
+import PagesShoesForm from './pages/Cadastro';
 import Main from './pages/Main';
 import Lancamentos from './pages/Lançamentos';
 import Feminino from './pages/Feminino';
@@ -84,7 +84,8 @@ function Routes(){
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact render={() => <Main calcados={calcados} />}/>
-                <Route path="/cadastro" component={Cadastro} />
+                <Route path="/cadastro" component={PagesShoesForm} />
+                <Route path="/edit/:id" component={PagesShoesForm} />
                 <Route path="/lancamentos" component={Lancamentos} />
                 <Route path="/feminino" render={() => <Feminino calcados={calcados} />} />
                 <Route path="/masculino" render={() => <Masculino calcados={calcados} />} />

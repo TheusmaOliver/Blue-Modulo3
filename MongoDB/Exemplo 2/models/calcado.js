@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const calcadoSchema = new mongoose.Schema({
-    nome:{
+    name:{
         type:String,
         required:true
     },
-    imagemUrl:{
+    imageUrl:{
         type:String,
         required:true
     },

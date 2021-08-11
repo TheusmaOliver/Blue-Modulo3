@@ -5,19 +5,19 @@ const ShoesController = require("./../controllers/shoes.controller")
 
 const shoesController = new ShoesController();
 
-// [GET] /filmes - Retorna a lista de filmes
-router.get("/calcados", shoesController.getShoes);
+// [GET] /shoes - Retorna a lista de calçados
+router.get("/shoes", shoesController.getShoes);
 
-// [GET] /filmes/{id} - Retorna apenas um Ãºnico filme pelo ID
-router.get("/calcados/:id", shoesController.getShoesById);
+// [GET] /shoes/{id} - Retorna apenas um único calçado pelo ID
+router.get("/shoes/:id", shoesController.getShoesById);
 
-// [POST] - /filmes - Cria um novo filme
-router.post("/calcados", shoesController.createShoes);
+// [POST] - /shoes - Cria um novo calçado
+router.post("/shoes", shoesController.createShoes);
 
-// [PUT] - /filmes/{id} - Atualiza um filme pelo ID
-router.put("/calcados/:id", shoesController.updateShoes);
+// [PUT] - /shoes/{id} - Atualiza um calçado pelo ID
+router.put("/shoes/:id", shoesController.updateShoes);
 
-// [Delete] - /filmes{id} - Remover um filme pelo ID
-router.delete("/calcados/:id", shoesController.deleteShoes);
+// [Delete] - /shoes/{id} - Remover um calçado pelo ID
+router.delete("/shoes/:id", shoesController.deleteShoes);
 
 module.exports = router;
